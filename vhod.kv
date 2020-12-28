@@ -1,0 +1,52 @@
+#:include glavnoe.kv
+<vhod>:
+    BoxLayout
+        id: vhod_layout
+        orientation: 'vertical'
+        padding: [10,50,10,50]
+        spacing: 30
+
+
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+                text: 'Вход'
+                font_size: 32
+
+
+
+            Label:
+                text: 'email'
+                halign: 'left'
+                font_size: 20
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: email
+                multiline:False
+
+                font_size: 20
+            Label:
+                text: 'Пароль'
+                halign: 'left'
+                font_size: 20
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: password
+                multiline:False
+                password:True
+                font_size: 20
+
+            Button:
+                text: 'Вход'
+                font_size: 20
+                on_press: root.do_vhod(password.text,email.text)
+            Button:
+                text: 'Нет аккаунта? Зарегистрироваться'
+                font_size: 20
+                on_press: root.do_reg()
+
+

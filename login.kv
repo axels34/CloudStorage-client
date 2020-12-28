@@ -1,0 +1,19 @@
+#:include registration.kv
+#:include vhod.kv
+<Login>:
+
+    BoxLayout
+        id: choose_layout
+        orientation: 'vertical'
+        padding: [10,50,10,50]
+        spacing: 50
+
+        Button:
+            text: 'Вход'
+            font_size: 20
+            on_press: root.do_vhod()
+        Button:
+            text: 'Регистрация'
+            font_size: 20
+
+            on_press: root.do_reg()

@@ -1,0 +1,29 @@
+<glavnoe>:
+    BoxLayout
+        id: glavnoe_layout
+        orientation: 'vertical'
+        padding: [10,50,10,50]
+        spacing: 50
+        BoxLayout:
+            orientation: 'vertical'
+
+            Button:
+                text: 'Загрузка'
+                font_size: 20
+                on_press: root.do_upload()
+            Button:
+                text: 'Скачивание'
+                font_size: 20
+                on_press: root.do_download()
+            Button:
+                text: 'Удаление'
+                font_size: 20
+                on_press: root.do_del()
+            Button:
+                text: 'Выход из аккаунта'
+                font_size: 20
+                on_press: root.do_vihod()
+
+
+
+

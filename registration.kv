@@ -1,0 +1,54 @@
+<registration>:
+    BoxLayout
+        id: registration_layout
+        orientation: 'vertical'
+        padding: [10,50,10,50]
+        spacing: 50
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Регистрация'
+                font_size: 32
+            Label:
+                text: 'Логин'
+                font_size: 20
+                halign: 'left'
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: login
+                multiline:False
+                font_size: 20
+
+            Label:
+                text: 'e-mail'
+                halign: 'left'
+                font_size: 20
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: email
+                multiline:False
+
+                font_size: 20
+            Label:
+                text: 'Пароль'
+                halign: 'left'
+                font_size: 20
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: password
+                multiline:False
+                password:True
+                font_size: 20
+
+            Button:
+                text: 'Регистрация'
+                font_size: 20
+                on_press: root.do_reg2(login.text, password.text,email.text)
+            Button:
+                text: 'Уже есть аккаунт?'
+                font_size: 20
+                on_press: root.do_est()
