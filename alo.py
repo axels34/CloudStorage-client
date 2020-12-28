@@ -148,6 +148,7 @@ def otprdown(z):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect(('26.245.128.62', 5050))
     header = 'DOWNLOAD CTCP'
+    a = os.getlogin()
     print("введите путь до файла, который хотите скачать\n")
     path = input()
     type = path.split(".")[1]
@@ -157,9 +158,8 @@ def otprdown(z):
     size = data.__len__()
     final_data = header+"\n"+size.__str__()+"\n"+data
     sock.sendall(final_data.encode())
-    filename = 'C:/Users/pomogite/Downloads/'+name+'.'+type
+    filename = 'C:/Users/'+a+'/Downloads/'+name+'.'+type
     f = open(filename,'wb')
-
     while True:
         data1 = sock.recv(1024)
         if not data1:
