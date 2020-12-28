@@ -68,8 +68,8 @@ class vhod(Screen):
 
     def do_vhod(self, password, email):
         global z
-        #z = alo.otprvhod(email, password)
-        #alo.otprtinf(z)
+        z = alo.otprvhod(email, password)
+        alo.otprtinf(z)
         print("Вы вошли,", email)
         self.manager.transition = SlideTransition(direction="left")
         self.manager.current = 'glavnoe'
